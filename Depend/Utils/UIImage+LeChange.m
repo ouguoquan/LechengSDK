@@ -6,7 +6,6 @@
 //  Copyright © 2017 lechange. All rights reserved.
 //
 
-#import "LCOpenSDK_Prefix.h"
 #import "UIImage+LeChange.h"
 
 @implementation UIImage(LeChange)
@@ -17,7 +16,7 @@
     if ([pred evaluateWithObject:name]) {
         NSString *theName;
         NSArray* array = [name componentsSeparatedByString:@"."];
-        NSString *curLanguage = NSLocalizedString(LANGUAGE_TXT, nil);
+        NSString *curLanguage = NSLocalizedString(@"LANGUAGE", nil);
         if ([curLanguage isEqualToString:@"en"] && array[0] ) {
             theName = [array[0] stringByAppendingString:@"_en.png"];
         }else if ([curLanguage isEqualToString:@"zh"]){
